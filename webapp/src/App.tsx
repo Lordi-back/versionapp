@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { UnifiedAnalyzer } from './analyzers/UnifiedAnalyzer';
+import { useState, useEffect } from 'react';
+import { UnifiedAnalyzer, AnalysisResult } from './analyzers/UnifiedAnalyzer';
 import sources from './data/sources.json';
 import FileUpload from './components/FileUpload';
 import Results from './components/Results';
@@ -7,7 +7,7 @@ import DeviceLink from './components/DeviceLink';
 
 function App() {
     const [deviceId, setDeviceId] = useState('');
-    const [analysisResult, setAnalysisResult] = useState(null);
+    const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
 
     useEffect(() => {
         let id = localStorage.getItem('deviceId');
