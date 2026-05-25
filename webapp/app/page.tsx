@@ -5,7 +5,6 @@ import FileUpload from '../components/FileUpload';
 import Results from '../components/Results';
 import DeviceLink from '../components/DeviceLink';
 import { UnifiedAnalyzer } from '@/lib/analyzers/UnifiedAnalyzer';
-import sources from '@/lib/analyzers/sources.json';
 
 export default function Home() {
     const [deviceId, setDeviceId] = useState('');
@@ -20,7 +19,7 @@ export default function Home() {
         setDeviceId(id);
     }, []);
 
-    const analyzer = new UnifiedAnalyzer(sources);
+    const analyzer = new UnifiedAnalyzer();
 
     const handleText = (text: string) => {
         const result = analyzer.analyze(text);
