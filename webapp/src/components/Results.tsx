@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnalysisResult } from '../types';
 
 interface Issue {
     category: string;
