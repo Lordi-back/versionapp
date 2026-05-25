@@ -4,6 +4,7 @@ import sources from './data/sources.json';
 import FileUpload from './components/FileUpload';
 import Results from './components/Results';
 import DeviceLink from './components/DeviceLink';
+import './App.css';
 
 function App() {
     const [deviceId, setDeviceId] = useState('');
@@ -26,11 +27,25 @@ function App() {
     };
 
     return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '1rem' }}>
-            <h1>Юридический AI Ассистент</h1>
-            <DeviceLink deviceId={deviceId} />
-            <FileUpload onTextExtracted={handleText} />
-            <Results result={analysisResult} />
+        <div className="app">
+            <header>
+                <h1>📄 Юридический AI Ассистент</h1>
+                <p>Загрузите документ или сделайте фото</p>
+            </header>
+
+            <div className="card">
+                <DeviceLink deviceId={deviceId} />
+            </div>
+
+            <div className="card">
+                <FileUpload onTextExtracted={handleText} />
+            </div>
+
+            {analysisResult && (
+                <div className="card">
+                    <Results result={analysisResult} />
+                </div>
+            )}
         </div>
     );
 }
