@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -12,13 +14,23 @@ export default function DeviceLink({ deviceId }: DeviceLinkProps) {
     const [generated, setGenerated] = useState('');
 
     const generateCode = async () => {
-        const res = await axios.post(`${API_BASE}/generate-code`, { hardwareId: deviceId });
-        setGenerated(res.data.code);
+        try {
+            const res = await axios.post(`${API_BASE}/generate-code`, { hardwareId: deviceId });
+            setGenerated(res.data.code);
+        } catch (error) {
+            console.error(error);
+            alert('Ошибка генерации кода');
+        }
     };
 
     const linkDevice = async () => {
-        await axios.post(`${API_BASE}/link-device`, { code, deviceId });
-        alert('Устройство привязано!');
+        try {
+            await axios.post(`${API_BASE}/link-device`, { code, deviceId });
+            alert('Устройство привязано!');
+        } catch (error) {
+            console.error(error);
+            alert('Ошибка привязки');
+        }
     };
 
     return (
