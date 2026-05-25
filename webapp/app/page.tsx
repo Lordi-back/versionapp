@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import FileUpload from '../components/FileUpload';
-import Results from '../components/Results';
-import DeviceLink from '../components/DeviceLink';
+import FileUpload from '@/components/FileUpload';
+import Results from '@/components/Results';
+import DeviceLink from '@/components/DeviceLink';
 import { UnifiedAnalyzer } from '@/lib/analyzers/UnifiedAnalyzer';
 
 export default function Home() {
