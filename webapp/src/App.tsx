@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { UnifiedAnalyzer, AnalysisResult } from './analyzers/UnifiedAnalyzer';
+import { UnifiedAnalyzer } from './analyzers/UnifiedAnalyzer';
+import { AnalysisResult } from './types';
 import sources from './data/sources.json';
 import FileUpload from './components/FileUpload';
 import Results from './components/Results';
