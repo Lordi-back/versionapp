@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useRef } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import mammoth from 'mammoth';
