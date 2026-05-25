@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import FileUpload from 'webapp/components/FileUpload';      // <-- относительный путь
-import Results from 'webapp/components/Results';            // <-- относительный путь
-import DeviceLink from 'webapp/components/DeviceLink';      // <-- относительный путь
+import FileUpload from 'versionapp/webapp/components/FileUpload';      // <-- относительный путь
+import Results from 'versionapp/webapp/components/Results';            // <-- относительный путь
+import DeviceLink from 'versionapp/webapp/components/DeviceLink';      // <-- относительный путь
 import { UnifiedAnalyzer } from '../lib/analyzers/UnifiedAnalyzer'; // <-- относительный путь
 
 export default function Home() {
