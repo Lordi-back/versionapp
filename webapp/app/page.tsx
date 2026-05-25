@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import FileUpload from 'versionapp/webapp/components/FileUpload';      // <-- относительный путь
-import Results from 'versionapp/webapp/components/Results';            // <-- относительный путь
-import DeviceLink from 'versionapp/webapp/components/DeviceLink';      // <-- относительный путь
-import { UnifiedAnalyzer } from '../lib/analyzers/UnifiedAnalyzer'; // <-- относительный путь
+import FileUpload from './components/FileUpload';
+import Results from './components/Results';
+import DeviceLink from './components/DeviceLink';
+import { UnifiedAnalyzer } from '../lib/analyzers/UnifiedAnalyzer';
 
 export default function Home() {
     const [deviceId, setDeviceId] = useState('');
