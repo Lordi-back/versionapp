@@ -1,22 +1,6 @@
 import React from 'react';
 import { AnalysisResult } from '../types';
 
-interface Issue {
-    category: string;
-    severity: string;
-    quote: string;
-    issue: string;
-    recommendation: string;
-}
-
-interface AnalysisResult {
-    allIssues: Issue[];
-    lawIssuesCount: number;
-    grammarIssuesCount: number;
-    riskIssuesCount: number;
-    summary: string;
-}
-
 interface ResultsProps {
     result: AnalysisResult;
 }
