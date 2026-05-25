@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnalysisResult } from '../types';
+import { AnalysisResult } from '@/lib/types';
 
 interface ResultsProps {
     result: AnalysisResult;
